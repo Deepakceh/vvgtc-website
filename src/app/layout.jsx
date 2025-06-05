@@ -12,9 +12,9 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Sachin Eduskills Pvt. Ltd.",
+  title: "VVGTC Pvt. Ltd.",
   description:
-    "Join Sachin Eduskills Pvt. Ltd., a recognized company offering free skill-based education, helping underprivileged youth unlock real career opportunities. Enroll in digital, vocational, and professional courses today.",
+    "Join V V G Trading Company Pvt. Ltd., a recognized company offering free skill-based education, helping underprivileged youth unlock real career opportunities. Enroll in digital, vocational, and professional courses today.",
   keywords: [
     "skill training",
     "free government courses",
@@ -31,15 +31,15 @@ export const metadata = {
     "sepl",
     "upnulm",
   ],
-  authors: [{ name: "Sachin Eduskills Pvt. Ltd." }],
-  creator: "Sachin Eduskills Pvt. Ltd.",
-  metadataBase: new URL("https://sachineduskills.com"),
+  authors: [{ name: "V V G Trading Company Pvt. Ltd." }],
+  creator: "V V G Trading Company Pvt. Ltd.",
+  metadataBase: new URL("https://vvgtcpl.com"),
   openGraph: {
-    title: "Free Govt. Certified Training | Sachin Eduskills Pvt. Ltd.",
+    title: "Free Govt. Certified Training | VVGTC Pvt. Ltd.",
     description:
-      "Join Sachin Eduskills Pvt. Ltd., a recognized company offering free skill-based education, helping underprivileged youth unlock real career opportunities. Enroll in digital, vocational, and professional courses today.",
+      "Join V V G Trading Company Pvt. Ltd., a recognized company offering free skill-based education, helping underprivileged youth unlock real career opportunities. Enroll in digital, vocational, and professional courses today.",
     url: "https://sachineduskills.com",
-    siteName: "Sachin Eduskills",
+    siteName: "VVGTC",
     locale: "en_IN",
     type: "website",
   },
