@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import Image from "next/image";
 import Link from "next/link";
@@ -28,42 +28,57 @@ const courses = [
 
 export default function CourseSection() {
   return (
-    <section className="bg-sky-50 py-16">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="bg-red-50 py-20">
+      <div className="max-w-6xl mx-auto px-4">
         {/* Heading */}
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-sky-700">Our Courses</h2>
-          <p className="text-gray-600 mt-2">Explore skill-based training courses tailored for your career goals.</p>
+        <div className="text-center mb-14">
+          <h2 className="text-4xl font-bold text-red-600">Explore Our Courses</h2>
+          <p className="text-gray-700 mt-3 text-lg">
+            A glimpse into our career-ready training programs.
+          </p>
         </div>
 
-        {/* Course Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Courses Horizontal Cards */}
+        <div className="space-y-8">
           {courses.map((course, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:border-sky-400 border transition duration-300 group"
+              className="flex flex-col sm:flex-row bg-white rounded-xl shadow hover:shadow-md border border-red-100 overflow-hidden transition duration-300"
             >
-              <div className="relative h-44 w-full">
+              {/* Image */}
+              <div className="relative w-full sm:w-56 h-56 sm:h-auto">
                 <Image
                   src={course.image}
                   alt={course.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover"
                 />
               </div>
-              <div className="p-4">
-                <h3 className="text-lg font-semibold text-sky-700 mb-1">{course.title}</h3>
-                <p className="text-gray-600 text-sm line-clamp-3">{course.description}</p>
+
+              {/* Text */}
+              <div className="p-6 flex flex-col justify-center">
+                <h3 className="text-xl font-semibold text-red-700 mb-2">
+                  {course.title}
+                </h3>
+                <p className="text-gray-700 text-sm mb-4 line-clamp-3">
+                  {course.description}
+                </p>
+                <Link
+                  href={`/courses/${course.slug || idx}`}
+                  className="text-sm text-red-600 font-medium hover:underline"
+                >
+                  Learn More →
+                </Link>
               </div>
             </div>
           ))}
         </div>
 
-        {/* View All Button */}
-        <div className="mt-10 text-center">
+        {/* CTA Button */}
+        <div className="mt-12 text-center">
           <Link
             href="/courses"
-            className="inline-block bg-sky-500 hover:bg-sky-600 text-white font-medium px-6 py-3 rounded-full transition"
+            className="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-3 rounded-full transition"
           >
             View All Courses
           </Link>

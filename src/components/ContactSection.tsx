@@ -3,7 +3,6 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { toast } from 'sonner';
-import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function ContactSection() {
   const initialValues = {
@@ -30,32 +29,37 @@ export default function ContactSection() {
   };
 
   return (
-    <>
-      {/* Contact Form */}
-      <section className="bg-gray-100 py-20">
-        <div className="max-w-2xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-800">LEAVE US YOUR INFO</h2>
-          <p className="text-sm text-gray-500 mt-2">AND WE WILL GET BACK TO YOU.</p>
+    <section className="bg-white py-24">
+      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+        {/* Left Section */}
+        <div>
+          <h2 className="text-4xl font-bold text-red-700">Let’s Connect</h2>
+          <p className="mt-4 text-gray-600 text-lg">
+            Have questions or need help? Just fill out the form and we’ll get back to you soon.
+          </p>
+          <div className="mt-8 border-l-4 border-red-600 pl-4 text-sm text-gray-500">
+            <p>We typically respond within 24–48 hours.</p>
+          </div>
+        </div>
 
+        {/* Right Form Card */}
+        <div className="bg-white shadow-xl border border-red-100 p-8 rounded-xl">
           <Formik
             initialValues={initialValues}
             validationSchema={validationSchema}
             onSubmit={handleSubmit}
           >
             {({ errors, touched }) => (
-              <Form className="mt-10 space-y-8">
+              <Form className="space-y-6">
                 {['name', 'email', 'mobile', 'message'].map((field) => (
                   <div key={field} className="relative">
                     <Field
                       name={field}
                       as={field === 'message' ? 'textarea' : 'input'}
-                      placeholder={
-                        field.charAt(0).toUpperCase() +
-                        field.slice(1).replace('mobile', 'Mobile Number') +
-                        (field === 'message' ? '' : '*')
-                      }
+                      placeholder=" "
                       rows={field === 'message' ? 4 : undefined}
-                      className={`w-full px-4 pt-6 pb-2 border rounded-md focus:outline-none focus:border-sky-600 peer placeholder-transparent
+                      className={`peer w-full px-4 pt-6 pb-2 border rounded-md focus:outline-none
+                        focus:border-red-600 placeholder-transparent transition
                         ${errors[field] && touched[field] ? 'border-red-500' : 'border-gray-300'}`}
                     />
                     <label
@@ -66,62 +70,31 @@ export default function ContactSection() {
                         peer-placeholder-shown:text-gray-400
                         peer-focus:top-2
                         peer-focus:text-sm
-                        peer-focus:text-sky-600"
+                        peer-focus:text-red-600"
                     >
-                      {field.charAt(0).toUpperCase() + field.slice(1).replace('mobile', 'Mobile Number')}
+                      {field === 'mobile'
+                        ? 'Mobile Number'
+                        : field.charAt(0).toUpperCase() + field.slice(1)}
                     </label>
                     <ErrorMessage
                       name={field}
                       component="div"
-                      className="text-red-500 text-sm mt-1 text-left"
+                      className="text-red-500 text-sm mt-1"
                     />
                   </div>
                 ))}
 
                 <button
                   type="submit"
-                  className="w-full bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 rounded-md shadow-lg transition"
+                  className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-md shadow-md transition"
                 >
-                  SUBMIT NOW
+                  Send Message
                 </button>
               </Form>
             )}
           </Formik>
         </div>
-      </section>
-      {/* Contact Info */}
-      <section className="bg-black text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-10 text-center">
-          {[{
-            Icon: Phone,
-            title: 'Phone',
-            text: 'Feel free to call us anytime.',
-            link: 'tel:+1234567890',
-            label: '0121-4352553'
-          }, {
-            Icon: Mail,
-            title: 'Email',
-            text: 'Reach out via email for inquiries.',
-            link: 'mailto:contact@sachineduskills.org',
-            label: 'Sachineduskills@yahoo.com'
-          }, {
-            Icon: MapPin,
-            title: 'Location',
-            text: 'C-86, Ganga Vatika, Ganga Nagar, Meerut, U.P.Pin: 250001',
-            link: 'https://maps.app.goo.gl/9xtVDABYssYgNPSu9',
-            label: 'View On Google Map'
-          }].map(({ Icon, title, text, link, label }, i) => (
-            <div key={i}>
-              <Icon className="mx-auto mb-4" size={28} />
-              <h4 className="font-bold text-lg mb-2">{title}</h4>
-              <p className="text-sm mb-2 whitespace-pre-line">{text}</p>
-              <a href={link} className="text-sky-400 text-sm hover:underline" target="_blank" rel="noreferrer">
-                {label}
-              </a>
-            </div>
-          ))}
-        </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

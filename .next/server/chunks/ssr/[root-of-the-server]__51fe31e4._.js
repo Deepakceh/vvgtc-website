@@ -168,8 +168,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$s
 ;
 ;
 const metadata = {
-    title: "Sachin Eduskills Pvt. Ltd.",
-    description: "Join Sachin Eduskills Pvt. Ltd., a recognized company offering free skill-based education, helping underprivileged youth unlock real career opportunities. Enroll in digital, vocational, and professional courses today.",
+    title: "VVGTC Pvt. Ltd.",
+    description: "Join V V G Trading Company Pvt. Ltd., a recognized company offering free skill-based education, helping underprivileged youth unlock real career opportunities. Enroll in digital, vocational, and professional courses today.",
     keywords: [
         "skill training",
         "free government courses",
@@ -178,7 +178,7 @@ const metadata = {
         "youth empowerment programs",
         "digital literacy training",
         "free education NGO",
-        "Sachin Eduskills Pvt. Ltd.",
+        "VVGTC Pvt. Ltd.",
         "upsdm",
         "pmkvy",
         "ddugky",
@@ -188,16 +188,16 @@ const metadata = {
     ],
     authors: [
         {
-            name: "Sachin Eduskills Pvt. Ltd."
+            name: "V V G Trading Company Pvt. Ltd."
         }
     ],
-    creator: "Sachin Eduskills Pvt. Ltd.",
-    metadataBase: new URL("https://sachineduskills.com"),
+    creator: "V V G Trading Company Pvt. Ltd.",
+    metadataBase: new URL("https://vvgtcpl.com"),
     openGraph: {
-        title: "Free Govt. Certified Training | Sachin Eduskills Pvt. Ltd.",
-        description: "Join Sachin Eduskills Pvt. Ltd., a recognized company offering free skill-based education, helping underprivileged youth unlock real career opportunities. Enroll in digital, vocational, and professional courses today.",
-        url: "https://sachineduskills.com",
-        siteName: "Sachin Eduskills",
+        title: "Free Govt. Certified Training | VVGTC Pvt. Ltd.",
+        description: "Join V V G Trading Company Pvt. Ltd., a recognized company offering free skill-based education, helping underprivileged youth unlock real career opportunities. Enroll in digital, vocational, and professional courses today.",
+        url: "https://vvgtcpl.com",
+        siteName: "VVGTC",
         locale: "en_IN",
         type: "website"
     },
