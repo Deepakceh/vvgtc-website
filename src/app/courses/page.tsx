@@ -1,6 +1,5 @@
 "use client";
 import HeroSection from '../../components/HeroSection'
-import StatsSection from '../../components/StatsSection'
 import Image from "next/image";
 
 const courses = [
@@ -48,8 +47,6 @@ export default function page() {
                     </div>
                 </div>
             </section>
-            <StatsSection />
-
         </>
     )
 }
