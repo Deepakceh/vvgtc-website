@@ -10,10 +10,12 @@ export default function Navbar() {
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         {/* Logo + Title */}
-        <div className="flex items-center gap-2">
-          <img src="/assets/images/logo.jpg" alt="VVGTC" className="h-16 w-auto" />
-          <span className="font-bold text-xl text-red-600">VVGTC</span>
-        </div>
+        <Link href="/" >
+          <div className="flex items-center gap-2">
+            <img src="/assets/images/logo.jpg" alt="VVGTC" className="h-16 w-auto" />
+            <span className="font-bold text-xl text-red-600">VVGTC</span>
+          </div>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 font-medium text-gray-700">
