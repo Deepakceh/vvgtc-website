@@ -20,33 +20,46 @@ export default function page() {
     return (
         <>
             <HeroSection title="Our Course's" currentPage="course" />
-            <section className="bg-gray-100 min-h-screen py-16">
-                <div className="max-w-7xl mx-auto px-4">
-                    <h1 className="text-4xl font-bold text-sky-700 mb-8 text-center">All Courses</h1>
+            <section className="bg-white py-20">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    {/* Section Heading */}
+                    <div className="text-center mb-14">
+                        <h2 className="text-4xl font-bold text-red-600">Our Skill Courses</h2>
+                        <p className="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
+                            Practical, job-ready training programs tailored for today’s workforce.
+                        </p>
+                    </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
+                    {/* Course List */}
+                    <div className="space-y-6">
                         {courses.map((course, idx) => (
                             <div
                                 key={idx}
-                                className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:border-sky-500 border transition-all duration-300 group"
+                                className="flex flex-col md:flex-row bg-red-50 hover:bg-white rounded-xl shadow-sm hover:shadow-md border border-red-100 transition duration-300 overflow-hidden"
                             >
-                                <div className="relative h-48 w-full">
+                                {/* Image */}
+                                <div className="md:w-48 h-48 flex-shrink-0 relative">
                                     <Image
                                         src={course.image}
                                         alt={course.title}
                                         fill
-                                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                        className="object-cover"
                                     />
                                 </div>
-                                <div className="p-4">
-                                    <h3 className="text-lg font-semibold text-sky-600 mb-1">{course.title}</h3>
-                                    <p className="text-gray-600 text-sm line-clamp-3">{course.description}</p>
+
+                                {/* Text */}
+                                <div className="p-6 flex flex-col justify-center">
+                                    <h3 className="text-xl font-semibold text-red-700 mb-2">
+                                        {course.title}
+                                    </h3>
+                                    <p className="text-gray-700 text-sm">{course.description}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
+
         </>
     )
 }

@@ -32,34 +32,39 @@ const steps = [
 
 export default function CurriculumSection() {
   return (
-    <section className="bg-white py-20 px-4 md:px-20 overflow-hidden">
+    <section className="bg-white py-20 px-4 md:px-12">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="max-w-6xl mx-auto text-center"
+        className="max-w-3xl mx-auto text-center mb-16"
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-gray-800 border-b-4 border-sky-600 inline-block pb-2">
-          Step-by-Step Learning Journey
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 relative inline-block pb-3 border-b-4 border-red-600">
+          Your Learning Pathway
         </h2>
+        <p className="text-gray-500 mt-4 text-sm md:text-base">
+          Navigate through our structured steps designed to boost your skills and career.
+        </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <div className="relative max-w-3xl mx-auto">
+        <div className="absolute left-5 top-0 w-1 h-full bg-red-500 rounded-full"></div>
+
         {steps.map((step, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="flex items-start gap-4 bg-white hover:shadow-md transition-shadow duration-300 p-4 rounded-lg border border-gray-100"
+            className="relative pl-16 mb-12"
           >
-            <div className="bg-sky-600 text-white font-bold text-lg w-10 h-10 rounded-full flex items-center justify-center shadow">
+            <div className="absolute left-0 top-1 w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center font-bold shadow-md">
               {index + 1}
             </div>
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-1">{step.title}</h3>
-              <p className="text-gray-600">{step.desc}</p>
+            <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <h3 className="text-red-700 font-semibold text-lg">{step.title}</h3>
+              <p className="text-gray-600 mt-1 text-sm">{step.desc}</p>
             </div>
           </motion.div>
         ))}

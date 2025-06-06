@@ -178,7 +178,7 @@ const metadata = {
         "youth empowerment programs",
         "digital literacy training",
         "free education NGO",
-        "Sachin Eduskills Pvt. Ltd.",
+        "VVGTC Pvt. Ltd.",
         "upsdm",
         "pmkvy",
         "ddugky",
@@ -196,7 +196,7 @@ const metadata = {
     openGraph: {
         title: "Free Govt. Certified Training | VVGTC Pvt. Ltd.",
         description: "Join V V G Trading Company Pvt. Ltd., a recognized company offering free skill-based education, helping underprivileged youth unlock real career opportunities. Enroll in digital, vocational, and professional courses today.",
-        url: "https://sachineduskills.com",
+        url: "https://vvgtcpl.com",
         siteName: "VVGTC",
         locale: "en_IN",
         type: "website"
